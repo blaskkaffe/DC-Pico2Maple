@@ -179,6 +179,8 @@ This repository is a copy of the Pico2Maple firmware download repository by Coli
 
 The DC- family's additions are on this branch only:
 
+- [`firmware/patched/pico2maple_2026-06-14_composite-toggle.uf2`](firmware/patched/pico2maple_2026-06-14_composite-toggle.uf2): **ready to flash.** The USB-only 2026-06-14 build with the composite keyboard/mouse toggle added (universal UF2 for Pico 1/2 and Pico 1/2-W, installed like any other: hold BOOTSEL, copy the file). Holding the front button (GPIO8) for 3 seconds switches a combo receiver between Dreamcast keyboard and mouse. Flashing a stock UF2 again removes it; VMU data and settings are kept. Not tried on a console yet.
+
 - [`patches/composite-toggle/`](patches/composite-toggle/README.md): a patch of the 2026-06-14 USB-only build. Holding the front button (GPIO8) for 3 seconds switches a USB receiver that has a keyboard and a mouse interface between a Dreamcast keyboard and a Dreamcast mouse. Source and build scripts only; the patched UF2 is not stored here (it contains the upstream firmware).
 - [`docs/unified/`](docs/unified/README.md): the family's shared documents; [05-pico2maple.md](docs/unified/05-pico2maple.md) describes what the firmware does, from a decompilation of the 2026-06-14 build.
 
