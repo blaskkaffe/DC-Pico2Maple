@@ -187,6 +187,6 @@ The DC- family's additions are on this branch only:
 ## License
 
 - **The Pico2Maple firmware and the files copied from the upstream repository** (UF2 files, README, changelog, images): Copyright Colin Luoma / Luoma Lab. **The upstream repository has no license file**, so no terms for redistribution or modification are stated there; ask the author before relying on any. The upstream README lists the open-source libraries the firmware uses: pico-sdk (BSD 3-Clause), TinyUSB, tusb_xinput, no-OS-FatFS-SD-SDIO-SPI-RPi-Pico, btstack (a non-commercial license with an exception for Raspberry Pi Pico) and cyw43-driver (its own license); their licenses apply to the parts of the firmware built from them.
-- **The composite-toggle patch** (`patches/composite-toggle/`, by the repository owner): **no license has been chosen yet.** It only works together with the upstream firmware.
+- **The composite-toggle patch source and scripts** (`patches/composite-toggle/`, by the repository owner): **MIT License**, see [patches/composite-toggle/LICENSE](patches/composite-toggle/LICENSE). This covers only the patch code. **It does not cover the patched UF2** in `firmware/patched/`: that file is the upstream firmware (see above, no terms stated there) with the patch added, and is shared on the same footing as the upstream UF2s in this repository.
 - The documents in `docs/unified/` are project notes for the DC- family; no separate license has been set for them.
 
