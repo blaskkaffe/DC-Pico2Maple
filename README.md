@@ -1,5 +1,7 @@
 # Pico2Maple
 
+> **Part of the DC- Dreamcast family** (branch `unified`): [DC-DreamDash](https://github.com/blaskkaffe/DC-DreamDash/tree/unified) · [DC-PicoLink](https://github.com/blaskkaffe/DC-PicoLink/tree/unified) · [DC-iBlueControlMod](https://github.com/blaskkaffe/DC-iBlueControlMod/tree/unified) · [DC-BlueRetro](https://github.com/blaskkaffe/DC-BlueRetro/tree/unified) · [DC-openMenu-Virtual-Folder-Bundle](https://github.com/blaskkaffe/DC-openMenu-Virtual-Folder-Bundle/tree/unified) · [DC-Pico2Maple](https://github.com/blaskkaffe/DC-Pico2Maple/tree/unified). They work alone and together. The shared plan, feature list, vocabulary and licenses overview are in [docs/unified/](docs/unified/README.md).
+
 | Example Projects           |  Connected to Dreamcast |
 | :-------------------------: | :-------------------------: |
 | ![Pico2Maple three dongles](resources/images/pico2maple_dongles.jpg)  |  ![Powered on](resources/images/wooden_box_powered_on.jpg) |
@@ -168,3 +170,21 @@ With everything wired up, it's simply a matter of plugging in a USB device to th
 * [btstack](https://github.com/bluekitchen/btstack) - [non-commercial](https://github.com/bluekitchen/btstack/blob/master/LICENSE), [pico commercial exception](https://github.com/raspberrypi/pico-sdk/blob/master/src/rp2_common/pico_btstack/LICENSE.RP)
 * [cyw43-driver](https://github.com/georgerobotics/cyw43-driver) - [License](https://github.com/georgerobotics/cyw43-driver/blob/main/LICENSE.RP)
 * [bluepad32](https://github.com/ricardoquesada/bluepad32) - Apache 2.0
+
+---
+
+## About this repository (DC-Pico2Maple, branch `unified`)
+
+This repository is a copy of the Pico2Maple firmware download repository by Colin Luoma (Luoma Lab): the text above and the files in `firmware/`, `docs/controller_layouts.md` and `resources/` are his. It holds the compiled firmware only; **no source code is published**, so the family works on the firmware by patching the binary.
+
+The DC- family's additions are on this branch only:
+
+- [`patches/composite-toggle/`](patches/composite-toggle/README.md): a patch of the 2026-06-14 USB-only build. Holding the front button (GPIO8) for 3 seconds switches a USB receiver that has a keyboard and a mouse interface between a Dreamcast keyboard and a Dreamcast mouse. Source and build scripts only; the patched UF2 is not stored here (it contains the upstream firmware).
+- [`docs/unified/`](docs/unified/README.md): the family's shared documents; [05-pico2maple.md](docs/unified/05-pico2maple.md) describes what the firmware does, from a decompilation of the 2026-06-14 build.
+
+## License
+
+- **The Pico2Maple firmware and the files copied from the upstream repository** (UF2 files, README, changelog, images): Copyright Colin Luoma / Luoma Lab. **The upstream repository has no license file**, so no terms for redistribution or modification are stated there; ask the author before relying on any. The upstream README lists the open-source libraries the firmware uses: pico-sdk (BSD 3-Clause), TinyUSB, tusb_xinput, no-OS-FatFS-SD-SDIO-SPI-RPi-Pico, btstack (a non-commercial license with an exception for Raspberry Pi Pico) and cyw43-driver (its own license); their licenses apply to the parts of the firmware built from them.
+- **The composite-toggle patch** (`patches/composite-toggle/`, by the repository owner): **no license has been chosen yet.** It only works together with the upstream firmware.
+- The documents in `docs/unified/` are project notes for the DC- family; no separate license has been set for them.
+
