@@ -179,14 +179,12 @@ This repository is a copy of the Pico2Maple firmware download repository by Coli
 
 The DC- family's additions are on this branch only:
 
-- [`firmware/patched/pico2maple_2026-06-14_composite-toggle.uf2`](firmware/patched/pico2maple_2026-06-14_composite-toggle.uf2): **ready to flash.** The USB-only 2026-06-14 build with the composite keyboard/mouse toggle added (universal UF2 for Pico 1/2 and Pico 1/2-W, installed like any other: hold BOOTSEL, copy the file). Holding the front button (GPIO8) for 3 seconds switches a combo receiver between Dreamcast keyboard and mouse. Flashing a stock UF2 again removes it; VMU data and settings are kept. Not tried on a console yet.
-
-- [`patches/composite-toggle/`](patches/composite-toggle/README.md): a patch of the 2026-06-14 USB-only build. Holding the front button (GPIO8) for 3 seconds switches a USB receiver that has a keyboard and a mouse interface between a Dreamcast keyboard and a Dreamcast mouse. Source and build scripts only; the patched UF2 is not stored here (it contains the upstream firmware).
+- The composite keyboard/mouse toggle patch (source, build scripts and the patched UF2) was **removed from this repository on 2026-11-05**: it is based on a decompilation of the closed firmware and is personal use only, not for sale or distribution. It stays in the owner's own copy; the earlier commits of this branch still contain it.
 - [`docs/unified/`](docs/unified/README.md): the family's shared documents; [05-pico2maple.md](docs/unified/05-pico2maple.md) describes what the firmware does, from a decompilation of the 2026-06-14 build.
 
 ## License
 
 - **The Pico2Maple firmware and the files copied from the upstream repository** (UF2 files, README, changelog, images): Copyright Colin Luoma / Luoma Lab. **The upstream repository has no license file**, so no terms for redistribution or modification are stated there; ask the author before relying on any. The upstream README lists the open-source libraries the firmware uses: pico-sdk (BSD 3-Clause), TinyUSB, tusb_xinput, no-OS-FatFS-SD-SDIO-SPI-RPi-Pico, btstack (a non-commercial license with an exception for Raspberry Pi Pico) and cyw43-driver (its own license); their licenses apply to the parts of the firmware built from them.
-- **The composite-toggle patch source and scripts** (`patches/composite-toggle/`, by the repository owner): **personal use only, not for sale or distribution**, see [patches/composite-toggle/LICENSE](patches/composite-toggle/LICENSE). Changed from MIT on 2026-11-05 because the patch is based on a decompilation of the closed firmware. Copies published earlier stay MIT. This covers only the patch code. **It does not cover the patched UF2** in `firmware/patched/`: that file is the upstream firmware (see above, no terms stated there) with the patch added, and is shared on the same footing as the upstream UF2s in this repository.
+- **The composite-toggle patch** (by the repository owner): **personal use only, not for sale or distribution**, and no longer hosted here (see above). It was MIT-licensed until 2026-11-05; copies downloaded earlier keep that grant.
 - The documents in `docs/unified/` are project notes for the DC- family; no separate license has been set for them.
 
