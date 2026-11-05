@@ -179,7 +179,7 @@ This repository is a copy of the Pico2Maple firmware download repository by Coli
 
 The DC- family's additions are on this branch only:
 
-- The composite keyboard/mouse toggle patch (source, build scripts and the patched UF2) was **removed from this repository on 2026-11-05**: it is based on a decompilation of the closed firmware and is personal use only, not for sale or distribution. It stays in the owner's own copy; the earlier commits of this branch still contain it.
+- The composite keyboard/mouse toggle patch (source, build scripts and the patched UF2) was **removed from this repository on 2026-11-05**: it is based on a decompilation of the closed firmware and is personal use only, not for sale or distribution. It was also removed from this branch's earlier commits (history rewritten); the owner keeps their own copy.
 - [`docs/unified/`](docs/unified/README.md): the family's shared documents; [05-pico2maple.md](docs/unified/05-pico2maple.md) describes what the firmware does, from a decompilation of the 2026-06-14 build.
 
 ## License
